@@ -22,12 +22,7 @@ class Lab22
 
 
 
-
-
         Date date = new Date();
-
-
-
 
 
         int variant = 17;
@@ -40,26 +35,13 @@ class Lab22
 
         double d =82545.874361624;
 
-        float f = -754368684;
+        float f = -736;
 
         String str="форматированный вывод";
-
-        System.out.printf("Демонстрируем %s: a = o , b = %09 , c = x , d = %010.4f\n , f = %08.2f\n ",
-
-        str,a,b,c,d,f);
-
-
-
-
-
-
 
         String fullName = fullName(lastName, firstName, middleName);
 
         String fullTeacherName = fullName(teacherLastName, teacherFirstName, teacherMiddleName);
-
-
-
 
 
         System.out.println("Прогрумму выполнил: \n" + fullName);
@@ -70,13 +52,11 @@ class Lab22
 
         System.out.println("Шифр группы: " + groupCode);
 
-         System.out.println("Проверил: \n" + fullTeacherName);
+        System.out.printf("Демонстрируем %s: a = %o(8) , b = %09d , c = %x(16) , d = %10.4f\n , f = %+08.2f\n ", str,a,b,c,d,f);
+
+        System.out.println("Проверил: \n" + fullTeacherName);
 
     }
-
-
-
-
 
     public static String fullName(String a, String b, String c) {
 
@@ -86,6 +66,3 @@ class Lab22
 
     
 }
-
-
-
