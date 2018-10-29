@@ -1,0 +1,82 @@
+import java.io.IOException;
+import java.util.Scanner;
+import myPack.myStack.*;
+import java.util.Collections;
+
+public class main {
+
+    public static void face() throws IOException {
+        System.out.println("/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("push arg -   Добавить число в стек");
+        System.out.println("add n arg - Добавить в n по счёту элемент стека элемен arg\ndel n - Удалить n элемент cтека");
+        System.out.println("clear - очищает стек");
+        System.out.println("rand - cоздает случаный стек\nget - Выводит и вынимает элемент стека\nchek - Выводит символ");
+        System.out.println("print - Вывести стек\nsize - Вывести количество элементов стека\nhelp - Вывести это меню\nexit - Выход");
+        System.out.println("/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        boolean exit = false;
+        face();
+        Stack list = new Stack();
+        Stack testList = new Stack();
+
+        while (exit == false) {
+
+            Scanner jin = new Scanner(System.in);
+            String words[] = jin.nextLine().split(" ");
+            switch (words[0]) {
+                case "max":
+                    if (list.empty() == false) list.temp();
+                    list.printStack();
+                    break;
+                case "rand":
+                    for (int i = 1; i < (Math.random() * (20 - 3)) + 3; i++) {
+                        list.push((int) ((Math.random() * (20 - 1)) + 1));
+                    }
+                    list.printStack();
+                    break;
+                case "get":
+                    System.out.println(list.get());
+                    break;
+                case "chek":
+                    System.out.println(list.chek());
+                    break;
+                case "clear":
+                    list.clear();
+                    break;
+                case "5":
+                    list.push(1);
+                    list.push(2);
+                    list.push(3);
+                    list.push(4);
+                    list.push(5);
+                    break;
+                case "print":
+                    list.printStack();
+                    break;
+                case "size":
+                    System.out.println(list.size());
+                    break;
+                case "push":
+                    if (words.length < 2) {
+                        System.out.println("Повторите ввод");
+                        break;
+                    }
+                    list.push(Integer.parseInt(words[1]));
+                    list.printStack();
+                    break;
+                case "help":
+                    face();
+                    break;
+                case "exit":
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Повторите ввод");
+            }
+
+        }
+    }
+}
