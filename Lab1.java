@@ -1,12 +1,12 @@
 class Lab1
 {
 	  public static void main(String[] args) {
-        String firstName = "Михаил";
-        String middleName = "Викторович";
-        String lastName = "Поддубный";
-        String teacherFirstName = "Елена";
-        String teacherMiddleName = "Сергеевна";
-        String teacherLastName = "Владимирова";
+        String firstName = "Nestor";
+        String middleName = "Ivanovich";
+        String lastName = "Makhno";
+        String teacherFirstName = "John";
+        String teacherMiddleName = "Ihon";
+        String teacherLastName = "Doe";
         String groupCode = "ИВТ/б-12о";
 
         Date date = new Date();
